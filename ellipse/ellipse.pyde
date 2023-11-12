@@ -1,12 +1,21 @@
-x=0
+# Задание 3
+# 1. Нарисуй круг размером больше холста.
+# 2. Сделай так, чтобы круг уменьшался на 2 за кадр.
+# 3. На каждом кадре цвет меняется на случайный. 
+# 4. Поменяй скорость уменьшения, 
+#    убери заливку, 
+#    убери обводку.
+x=5
 def setup():
-    size(600,400)
-    background(100,100,255)
+    size(600, 600)
     frameRate(10)
-def draw(): 
-   stroke(random(255),random(255),random(255))
-   fill(random(255),random(255),random(255))
-   global x
-   x=x+1
-   scale(x)
-   ellipse(x,x,15,10)
+    noStroke()
+    
+def draw():
+    # здесь код
+    
+    global x 
+    x=x-0.1
+    scale(x)
+    fill(random(255),random(255),random(255))
+    ellipse(100,100,650,650)
