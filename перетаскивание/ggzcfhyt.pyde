@@ -1,0 +1,28 @@
+def setup():
+    size(600,600)
+def draw():
+    if mousePressed:
+        background(100,255,100)
+        translate(-300,-300)
+        translate(pmouseX,pmouseY)
+        stroke(198,114,34)
+        fill(245,125,12)
+        strokeWeight(10)
+        triangle(300,300,220,450,380,450)
+        line(250,440,260,480)
+        line(270,440,260,480)
+        line(350,440,340,480)
+        line(330,440,340,480)
+        stroke(198,114,34)
+        triangle(300,330,380,250,220,250)
+        stroke(5,2,0)
+        strokeWeight(20)
+        point(300,330)
+        strokeWeight(15)
+        point(330,270)
+        point(270,270)
+        stroke(198,114,34)
+        strokeWeight(10)
+        triangle(380,290,390,250,350,250)
+        triangle(220,290,210,250,250,250)
+    
