@@ -1,0 +1,56 @@
+x=0 
+q=130
+def setup():
+    size(600,600)
+def draw():
+    fill(q,q,q)
+    noStroke()
+    push()
+    translate(140,140)
+    rect(10,10,150,150)
+    rect(170,10,150,150)
+    rect(10,170,150,150)
+    rect(170,170,150,150) 
+    pop() 
+    if keyPressed:
+        if key == 'b' or 'B':
+            push()
+            fill(100,100,255)
+            noStroke()
+            translate(140,140)
+            rect(10,10,150,150)
+            rect(170,10,150,150)
+            rect(10,170,150,150)
+            rect(170,170,150,150) 
+            pop() 
+        elif key == 'r' or 'R':
+            push()
+            fill(255,100,100)
+            noStroke()
+            translate(140,140)
+            rect(10,10,150,150)
+            rect(170,10,150,150)
+            rect(10,170,150,150)
+            rect(170,170,150,150) 
+            pop()        
+        elif key == 'g' or 'G':
+            push()
+            fill(100,255,100)
+            noStroke()
+            translate(140,140)
+            rect(10,10,150,150)
+            rect(170,10,150,150)
+            rect(10,170,150,150)
+            rect(170,170,150,150) 
+            pop()
+        elif keyCode == SHIFT:
+            push()
+            fill(q,q,q)
+            noStroke()
+            translate(140,140)
+            rect(10,10,150,150)
+            rect(170,10,150,150)
+            rect(10,170,150,150)
+            rect(170,170,150,150) 
+            pop() 
+                                    
