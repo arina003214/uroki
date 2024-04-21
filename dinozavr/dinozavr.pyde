@@ -4,7 +4,7 @@ puc=0
 timer_up=0
 timer_down=0
 y=300
-w=370
+w=450
 x=True
   
 def collideRectRect (x, y, w, h, x2, y2, w2, h2):
@@ -24,12 +24,22 @@ def setup():
 def draw():
     global kak,dino,puc,y,timer_up,timer_down,w,x
     image(puc,0,0,600,600)
-    image(kak,w,360,150,150)
+    image(kak,w,380,120,130)
     w = w - 6
     image(dino,10,y,160,200)
     noStroke()
     fill(250,190,50) 
     rect(0,500,600,100)
+    
+    if timer_down > 0:
+        timer_down = timer_down - 1
+        y = y + 6
+    if timer_up > 0:
+        timer_up = timer_up - 1
+        y = y - 6
+        if timer_up == 0:
+            timer_down = 40
+    
     if w< 0:
         w=random(600,1000)
     if x==collideRectRect (10, y, 160, 160, w, 360, 150, 150):
@@ -43,11 +53,4 @@ def keyPressed():
     global timer_up, timer_down,y
     if key == " " and timer_up == 0 and timer_down == 0:
         timer_up = 40
-        if timer_down > 0:
-            timer_down = timer_down - 1
-            y = y + 4
-        if timer_up > 0:
-            timer_up = timer_up - 1
-            y = y - 4
-            if timer_up == 0:
-                timer_down = 40
+        
