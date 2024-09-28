@@ -1,0 +1,5 @@
+num1 = input('введите любое число')
+num2 = input('введите любое число')
+num1=int(num1)
+num2=int(num2)
+print('сумма:',(float(num1)+float(num2))/2)
