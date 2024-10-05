@@ -1,9 +1,10 @@
-tema = input('Кира: Артем, сколько у тебя денег?')
-tema = int(tema)
-liza = input ('Кира: Лиза, а у тебя?')
-liza = int(liza)
-kira = input('Кира: у меня больше всех тут есть')
-kira = int(kira)
-print('Кира:нам не хватает',15000-float(tema)-float(liza)-float(kira))
-
-
+import time
+print('-сколько у тебя щас денег?')
+time.sleep(1)
+m = open('m.txt', 'r')
+text = m.read()
+m.close
+print(text)
+mon = input('-какая у тебя зарптала?')
+mon = int(mon)
+print(12000+mon)
